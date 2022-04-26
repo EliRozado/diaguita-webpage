@@ -1,0 +1,29 @@
+.seccion-nosotros{
+    height: 800px;
+}
+
+.seccion-index{
+    height: 700px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    .seccion-titulo{
+        font-size: 32px;
+        color: #315DA8;
+    }
+    .card-contacto{
+        border: 5px solid #6790D7;
+        color: #6790D7;
+        border-radius: 5px;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        width: 350px;
+        height: 350px;
+        font-size: 20px;
+        .bi{
+            font-size: 8em;
+        }
+    }
+
+}

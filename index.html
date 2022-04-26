@@ -16,79 +16,81 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html"><img src="img/diaguita_logo.png"/></a>
-            
-            <ul>
-                <li> <a href="#">Nosotros</a> </li>
-                <li> <a href="#">Servicios</a> </li>
-                <li> <a href="#">Contacto</a> </li>
-            </ul>
-            
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <div class="contenedor">
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="nav-logo"><img src="img/diaguita_logo.png"/></a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"> <a href="#nosotros">Nosotros</a> </li>
+                    <li class="nav-item"> <a href="#servicios">Servicios</a> </li>
+                    <li class="nav-item"> <a href="#contacto">Contacto</a> </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        
+        <section class="seccion-nosotros" id="nosotros">
+            <h1>Diaguita Farm</h1>
+            <p>lorem ipsum</p>
+            <p>lorem ipsum</p>
+        </section>
+    
+        <section class="seccion-index" id="servicios">
+            <h2 class="seccion-titulo">Nuestros Servicios</h2>
+            <div>
+                <img src=""/>
+                <p>Venta de Equipos para Mineria</p>
+                <a href="">Ver más</a>
             </div>
-        </nav>
-    </header>
     
-    <section>
-        <h1>Diaguita Farm</h1>
-        <p>lorem ipsum</p>
-        <p>lorem ipsum</p>
-    </section>
-
-    <section>
-        <h2>Nuestros Servicios</h2>
-        <div>
-            <img src=""/>
-            <p>Venta de Equipos para Mineria</p>
-            <a href="">Ver más</a>
-        </div>
-
-        <div>
-            <img src=""/>
-            <p>Housing de Equipos</p>
-            <a href="">Ver más</a>
-        </div>
-    </section>
-
-    <section>
-        <h2>Contacto</h2>
-        <div>
-            <p><i class="bi bi-envelope"></i></p>
-            <p>Email</p>
-            <p>placeholder</p>
-        </div>
-
-        <div>
-            <p><i class="bi bi-whatsapp"></i></p>
-            <p>Whatsapp</p>
-            <p>placeholder</p>
-        </div>
-    </section>
+            <div>
+                <img src=""/>
+                <p>Housing de Equipos</p>
+                <a href="">Ver más</a>
+            </div>
+        </section>
     
-
-    <footer>
-        <div>
-            <p><i class="bi bi-chevron-up"></i></p>
-            <img src="img/diaguita_logo.png"/>
-            <a href=""><i class="bi bi-instagram"></i></a>
-        </div>
-        <div>
-            <h3>Servicios</h3>
-            <a href="pages/equipos.html">Venta de Equipos</a>
-            <a href="pages/housing.html">Housing</a>
-        </div>
-        <div>
-            <h3>Contacto</h3>
-            <p>Email: placeholder</p>
-            <p>Teléfono: placeholder</p>
-        </div>
-    </footer>
+        <section class="seccion-index" id="contacto">
+            <h2 class="seccion-titulo">Contacto</h2>
+            <div class="card-contacto">
+                <p><i class="bi bi-envelope"></i></p>
+                <p>Email</p>
+                <p>placeholder</p>
+            </div>
     
+            <div class="card-contacto">
+                <p><i class="bi bi-whatsapp"></i></p>
+                <p>Whatsapp</p>
+                <p>placeholder</p>
+            </div>
+        </section>
+        
+    
+        <footer>
+            <div>
+                <p><i class="bi bi-chevron-up"></i></p>
+                <img src="img/diaguita_logo.png"/>
+                <a href=""><i class="bi bi-instagram"></i></a>
+            </div>
+            <div>
+                <h3>Servicios</h3>
+                <a href="pages/equipos.html">Venta de Equipos</a>
+                <a href="pages/housing.html">Housing</a>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <p>Email: placeholder</p>
+                <p>Teléfono: placeholder</p>
+            </div>
+        </footer>    
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
