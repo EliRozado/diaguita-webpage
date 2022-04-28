@@ -12,13 +12,15 @@ body {
   margin: auto; }
 
 .header {
+  width: 100%;
   height: 120px;
-  padding: 25px 70px; }
+  background-color: #F2F2F2; }
   .header .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 70px; }
+    height: 70px;
+    padding: 25px 70px; }
     .header .nav .nav-logo img {
       height: 70px; }
     .header .nav .nav-menu {
@@ -31,30 +33,66 @@ body {
         text-decoration: none;
         font-size: 24px;
         color: #2D85BD; }
-    .header .nav .nav-hamburger {
-      display: block; }
+    .header .nav .hamburger {
+      display: none;
+      cursor: pointer;
+      padding: 10px 10px;
+      border: 1px solid #878787;
+      border-radius: 5px;
+      background-color: #D8D8D8; }
+      .header .nav .hamburger .bar {
+        display: block;
+        width: 50px;
+        height: 7px;
+        margin: 6px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: #878787; }
 
-/* -- Mobile -- */
-.hamburger {
-  align-self: center;
-  display: none;
-  flex-flow: column wrap;
-  gap: 6px;
-  padding: 15px 10px;
-  cursor: pointer;
-  border: 1px solid #878787;
-  border-radius: 5px;
-  background-color: #D8D8D8; }
-
-.bar {
-  display: block;
-  width: 50px;
-  height: 7px;
-  transition: all 0.3s ease-in-out;
-  background-color: #878787; }
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block !important; }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0; }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(13px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg); }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 120px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s; }
+    .nav-menu .nav-item {
+      margin: 16px 0; }
+      .nav-menu .nav-item a {
+        color: #28a3c9; }
+  .nav-menu.active {
+    left: 0; } }
 
 .seccion-nosotros {
-  height: 800px; }
+  font-family: "Nunito Sans", sans-serif;
+  height: 800px;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(11, 11, 11, 0.55), rgba(11, 11, 11, 0.55)), url(../img/placeholder.jpeg);
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 50px;
+  color: white; }
+  .seccion-nosotros h1 {
+    font-size: 48px;
+    padding: 0px 70px;
+    font-weight: 300; }
+  .seccion-nosotros p {
+    font-size: 32px;
+    padding: 0px 70px;
+    max-width: 800px; }
 
 .seccion-index {
   height: 700px;
@@ -76,3 +114,9 @@ body {
     font-size: 20px; }
     .seccion-index .card-contacto .bi {
       font-size: 8em; }
+
+@media screen and (max-width: 768px) {
+  .seccion-nosotros {
+    text-align: center; }
+    .seccion-nosotros p {
+      font-size: 30px; } }
