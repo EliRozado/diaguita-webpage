@@ -1,0 +1,14 @@
+$color-btn-1: #57E1FD;
+$color-btn-2: #31B6D0;
+$color-texto: #FFF;
+$font-size: 20px;
+
+.boton{
+    padding: 10px 30px;
+    background: linear-gradient(180deg, $color-btn-1 0%, $color-btn-2 100%);
+    color: $color-texto;
+    font-size: $font-size;
+    text-decoration: none;
+    box-shadow: 0px 3px 3px rgba(172, 166, 166, 0.25);
+    border-radius: 5px;
+}

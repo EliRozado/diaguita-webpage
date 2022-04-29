@@ -1,0 +1,70 @@
+@import "boton";
+
+.seccion-infoServ{
+    padding: 0px 70px;
+    height: 600px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 80px;
+    .infoServ{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 30px;
+        justify-content: center;
+        max-width: 600px;
+        h1{
+            font-size: 32px;
+            color: #315DA8;
+        }
+        p{
+            font-size: 20px;
+        }
+        .boton-infoServ{
+            @extend .boton;
+            align-self: center;
+        }
+    }
+    .imgServicio{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        align-self: center;
+        min-width: 300px;
+        height: 400px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.imgServicio-mobile{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    .seccion-infoServ{
+        padding: 0px 40px;
+        flex-flow: column nowrap;
+        text-align: center;
+        height: 500px;
+        .infoServ{
+            align-items: center;
+        }
+        .imgServicio{
+            display: none;
+        }
+    }
+
+    .imgServicio-mobile{
+        display:flex;
+        width: 100%;
+        height: 400px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
