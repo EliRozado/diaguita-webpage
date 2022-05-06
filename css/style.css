@@ -4,25 +4,32 @@
   padding: 0; }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #fff;
   font-family: "Nunito Sans", sans-serif; }
 
 .contenedor {
   max-width: 1440px;
   margin: auto; }
 
+.border-box, .seccion-top-index, .seccion-index, .footer {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box; }
+
+.logo img {
+  height: 70px; }
+
 .header {
   width: 100%;
-  height: 120px;
-  background-color: #F2F2F2; }
+  height: 120px; }
   .header .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     height: 70px;
+    gap: 40px;
     padding: 25px 70px; }
-    .header .nav .nav-logo img {
-      height: 70px; }
     .header .nav .nav-menu {
       display: flex;
       justify-content: space-between;
@@ -50,7 +57,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .nav {
-    padding: 25px 40px !important; }
+    padding: 25px 40px !important;
+    justify-content: space-between; }
   .hamburger {
     display: block !important; }
   .hamburger.active .bar:nth-child(2) {
@@ -76,119 +84,108 @@ body {
   .nav-menu.active {
     left: 0; } }
 
-.seccion-nosotros {
-  font-family: "Nunito Sans", sans-serif;
-  height: 800px;
+.seccion-top-index {
+  min-height: 750px;
   width: 100%;
-  background: linear-gradient(0deg, rgba(11, 11, 11, 0.55), rgba(11, 11, 11, 0.55)), url(../img/placeholder.jpeg);
-  background-size: cover;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  gap: 50px;
-  color: white; }
-  .seccion-nosotros h1 {
-    font-size: 48px;
-    padding: 0px 70px;
-    font-weight: 300; }
-  .seccion-nosotros p {
-    font-size: 32px;
-    padding: 0px 70px;
-    max-width: 800px; }
-
-.seccion-index {
-  height: 700px;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center; }
+  justify-content: center;
+  padding: 0px 70px;
+  gap: 50px; }
+  .seccion-top-index .cont-text {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 50px;
+    justify-content: center; }
+    .seccion-top-index .cont-text .titulo-top {
+      font-family: "Russo One", sans-serif;
+      color: #2E2868;
+      font-size: 48px;
+      font-weight: 300; }
+    .seccion-top-index .cont-text .texto-top {
+      font-size: 32px;
+      max-width: 800px;
+      font-family: "DM Sans", sans-serif;
+      color: #624B9E; }
+  .seccion-top-index .img-top {
+    flex-basis: 100%;
+    align-self: center; }
+    .seccion-top-index .img-top img {
+      max-width: 100%;
+      object-fit: cover; }
+
+.seccion-index {
+  min-height: 650px;
+  padding: 50px 70px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; }
   .seccion-index .seccion-titulo {
     font-size: 32px;
     color: #315DA8; }
   .seccion-index .contenedor-card {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center; }
+    align-items: center;
+    gap: 70px; }
+    .seccion-index .contenedor-card .card {
+      display: flex;
+      flex-flow: column wrap;
+      height: 500px;
+      width: 400px;
+      align-items: center;
+      justify-content: center;
+      background-color: #fefefe;
+      border: 1px solid #CCC;
+      border-radius: 20px;
+      gap: 35px; }
+      .seccion-index .contenedor-card .card .card-title {
+        color: #6790D7;
+        font-size: 24px; }
+      .seccion-index .contenedor-card .card .boton, .seccion-index .contenedor-card .card .seccion-infoServ .infoServ .boton-infoServ, .seccion-infoServ .infoServ .seccion-index .contenedor-card .card .boton-infoServ {
+        background: linear-gradient(180deg, #57E1FD 0%, #31B6D0 100%);
+        padding: 10px 30px;
+        border-radius: 5px;
+        font-size: 20px;
+        text-decoration: none;
+        color: #FFF; }
+        .seccion-index .contenedor-card .card .boton:visited, .seccion-index .contenedor-card .card .seccion-infoServ .infoServ .boton-infoServ:visited, .seccion-infoServ .infoServ .seccion-index .contenedor-card .card .boton-infoServ:visited {
+          color: #FFF; }
+        .seccion-index .contenedor-card .card .boton:hover, .seccion-index .contenedor-card .card .seccion-infoServ .infoServ .boton-infoServ:hover, .seccion-infoServ .infoServ .seccion-index .contenedor-card .card .boton-infoServ:hover {
+          background: linear-gradient(180deg, #78e9ff 0%, #50c9e1 100%); }
+      .seccion-index .contenedor-card .card img {
+        width: 200px; }
     .seccion-index .contenedor-card .card-contacto {
       border: 5px solid #6790D7;
-      color: #6790D7;
-      border-radius: 5px;
+      color: #315DA8;
+      border-radius: 20px;
       display: flex;
       flex-flow: column nowrap;
-      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
       width: 350px;
       height: 350px;
       font-size: 20px; }
       .seccion-index .contenedor-card .card-contacto .bi {
-        font-size: 8em; }
+        height: 60px; }
 
 @media screen and (max-width: 768px) {
-  .seccion-nosotros {
-    text-align: center; }
-    .seccion-nosotros p {
-      font-size: 1.5em; }
+  .seccion-top-index {
+    padding: 55px 40px;
+    text-align: center;
+    flex-flow: column wrap; }
   .seccion-index {
-    height: 350px;
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    margin: 3%;
-    text-align: center; }
+    padding: 50px 40px;
+    gap: 40px; }
     .seccion-index .contenedor-card {
-      display: flex;
-      flex-direction: row; }
-      .seccion-index .contenedor-card .seccion-titulo {
-        font-size: 1.5em;
-        color: #315DA8;
-        text-align: center;
-        padding: 10px;
-        width: 100%;
-        height: fit-content; }
-      .seccion-index .contenedor-card .card-contacto {
-        border: 2px solid #6790D7;
-        color: #6790D7;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        display: inline-flex;
-        gap: 10px;
-        margin: 2%;
-        padding: 10px;
-        width: 10em;
-        height: 10em;
-        font-size: 1em;
-        align-items: center; }
-        .seccion-index .contenedor-card .card-contacto .bi {
-          font-size: 4em;
-          align-items: center;
-          text-align: center;
-          display: flex;
-          flex-direction: column; }
-      .seccion-index .contenedor-card .card-servicio {
-        border: 2px solid #6790D7;
-        color: #6790D7;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        display: inline-flex;
-        gap: 10px;
-        margin: 2%;
-        padding: 10px;
-        width: 12em;
-        height: 12em;
-        font-size: 1em; }
-        .seccion-index .contenedor-card .card-servicio .bi {
-          font-size: 1em; } }
-
-.boton, .seccion-infoServ .infoServ .boton-infoServ {
-  padding: 10px 30px;
-  background: linear-gradient(180deg, #57E1FD 0%, #31B6D0 100%);
-  color: #FFF;
-  font-size: 20px;
-  text-decoration: none;
-  box-shadow: 0px 3px 3px rgba(172, 166, 166, 0.25);
-  border-radius: 5px; }
+      gap: 40px;
+      flex-direction: column; }
+    .seccion-index .card {
+      width: 100%; } }
 
 .seccion-infoServ {
   padding: 0px 70px;
@@ -260,16 +257,19 @@ body {
 
 .footer {
   width: 100%;
-  height: auto;
-  background-color: #F2F2F2;
+  height: 280px;
+  background-color: #C1C0C3;
   font-size: 1rem;
-  font-family: 'Nunito-sans';
+  font-family: 'Nunito sans', sans-serif;
+  color: #fff;
   text-decoration: none;
   justify-content: space-around;
   flex-direction: row;
   display: flex; }
   .footer h3 {
-    color: #0f001b; }
+    color: #878787;
+    font-weight: bold;
+    font-size: 20px; }
   .footer .foo {
     height: 80px;
     width: auto;
@@ -277,6 +277,12 @@ body {
     flex-direction: column;
     justify-content: space-around;
     padding: 5%; }
+    .footer .foo a {
+      color: #fff; }
+    .footer .foo .bi-instagram {
+      font-size: 30px; }
+    .footer .foo .bi-chevron-up {
+      display: none; }
 
 a:link {
   text-decoration: none;

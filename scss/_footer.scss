@@ -1,17 +1,21 @@
 
 .footer{
-        width: 100%;
-        height: auto;
-        background-color: #F2F2F2;  
-        font-size: 1rem;
-        font-family: 'Nunito-sans';
+    @extend .border-box;
+    width: 100%;
+    height: 280px;
+    background-color: #C1C0C3;  
+    font-size: 1rem;
+    font-family: 'Nunito sans', sans-serif;
+    color: #fff;
         h3{
-            color: #0f001b;
+            color: #878787;
+            font-weight: bold;
+            font-size: 20px;
         }
-        text-decoration: none;
-        justify-content: space-around;
-        flex-direction: row;
-        display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    flex-direction: row;
+    display: flex;
         .foo{
             height: 80px;
             width: auto;
@@ -19,7 +23,15 @@
             flex-direction: column;
             justify-content: space-around;
             padding: 5%;
-            
+            a{
+                color: #fff;
+            }
+            .bi-instagram{
+                font-size: 30px;
+            }
+            .bi-chevron-up{
+                display: none;
+            }
         }
     
     }

@@ -1,6 +1,8 @@
 /* Variables Globales */
-$fuente: 'Nunito Sans', sans-serif;
-$color-fondo: #F2F2F2;
+$fuente-titulo: 'Russo One', sans-serif;
+$fuente-texto: 'DM Sans', sans-serif;
+$fuente-nunito: 'Nunito Sans', sans-serif;
+$color-fondo: #fff;
 
 *{
     margin: 0;
@@ -9,7 +11,7 @@ $color-fondo: #F2F2F2;
 
 body{
     background-color: $color-fondo;
-    font-family: $fuente;
+    font-family: $fuente-nunito;
 }
 
 .contenedor{
@@ -17,7 +19,19 @@ body{
     margin:auto;
 }
 
+.border-box{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+}
+
+.logo img{
+    height: 70px;
+}
+
 @import "header";
+@import "boton";
+@import "card";
 @import "sections";
 @import "servicios";
 @import "footer";
