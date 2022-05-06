@@ -7,11 +7,11 @@ body {
   background-color: #fff;
   font-family: "Nunito Sans", sans-serif; }
 
-.contenedor, .footer .container {
+.contenedor, .cualidades .contenedor, .footer .container {
   max-width: 1440px;
   margin: auto; }
 
-.border-box, .seccion-top-index, .seccion-index, .seccion-infoServ, .rigs, .rigs .contenedor-rig .card, .footer {
+.border-box, .seccion-top-index, .seccion-index, .cualidades .contenedor, .seccion-infoServ, .rigs, .rigs .contenedor-rig .card, .footer {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;
@@ -177,6 +177,32 @@ body {
       .seccion-index .contenedor-card .card-contacto .bi {
         height: 60px; }
 
+.cualidades {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  background-color: #ECECEC;
+  height: 460px; }
+  .cualidades .contenedor, .cualidades .footer .container, .footer .cualidades .container {
+    gap: 190px;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    display: flex; }
+    .cualidades .contenedor .item, .cualidades .footer .container .item, .footer .cualidades .container .item {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+      height: 250px; }
+      .cualidades .contenedor .item p, .cualidades .footer .container .item p, .footer .cualidades .container .item p {
+        font-size: 40px;
+        color: #2B65B0; }
+      .cualidades .contenedor .item img, .cualidades .footer .container .item img, .footer .cualidades .container .item img {
+        flex-basis: 100%;
+        align-self: center;
+        max-width: 250px; }
+
 @media screen and (max-width: 768px) {
   .seccion-top-index {
     padding: 55px 40px;
@@ -189,7 +215,17 @@ body {
       gap: 40px;
       flex-direction: column; }
     .seccion-index .card {
-      width: 100%; } }
+      width: 100%; }
+  .cualidades {
+    height: 250px; }
+    .cualidades .contenedor, .cualidades .footer .container, .footer .cualidades .container {
+      gap: 100px; }
+      .cualidades .contenedor .item, .cualidades .footer .container .item, .footer .cualidades .container .item {
+        height: 125px; }
+        .cualidades .contenedor .item p, .cualidades .footer .container .item p, .footer .cualidades .container .item p {
+          font-size: 20px; }
+        .cualidades .contenedor .item img, .cualidades .footer .container .item img, .footer .cualidades .container .item img {
+          max-width: 100px; } }
 
 /* Top */
 /* Card */

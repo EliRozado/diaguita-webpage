@@ -101,6 +101,39 @@ $contacto-texto: #315DA8;
     } 
 }
 
+.cualidades{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: #ECECEC;
+    height: 460px;
+    .contenedor{
+        @extend .contenedor;
+        @extend .border-box;
+        gap: 190px;
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        display: flex;
+        .item{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            text-align: center;
+            height: 250px;
+            p{
+                font-size: 40px;
+                color: #2B65B0;
+            }
+            img{
+                flex-basis: 100%;
+                align-self: center;
+                max-width: 250px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:768px){
     .seccion-top-index{
         padding: 55px 40px;
@@ -116,6 +149,22 @@ $contacto-texto: #315DA8;
         }
         .card{
             width: 100%;
+        }
+    }
+
+    .cualidades{
+        height: 250px;
+        .contenedor{
+            gap: 100px;
+            .item{
+                height: 125px;
+                p{
+                    font-size: 20px;
+                }
+                img{
+                    max-width: 100px;
+                }
+            }
         }
     }
 }
