@@ -7,7 +7,7 @@ body {
   background-color: #fff;
   font-family: "Nunito Sans", sans-serif; }
 
-.contenedor {
+.contenedor, .footer .container {
   max-width: 1440px;
   margin: auto; }
 
@@ -324,28 +324,31 @@ body {
   font-size: 1rem;
   font-family: 'Nunito sans', sans-serif;
   color: #fff;
-  text-decoration: none;
-  justify-content: space-around;
-  flex-direction: row;
-  display: flex; }
-  .footer h3 {
-    color: #878787;
-    font-weight: bold;
-    font-size: 20px; }
-  .footer .foo {
-    height: 80px;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 5%; }
-    .footer .foo a {
-      color: #fff; }
-    .footer .foo .bi-instagram {
-      font-size: 30px; }
-    .footer .foo .bi-chevron-up {
-      display: none;
-      font-size: 30px; }
+  text-decoration: none; }
+  .footer .container {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex; }
+    .footer .container .foo {
+      height: 80px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 5%;
+      gap: 10px; }
+      .footer .container .foo a {
+        color: #fff; }
+      .footer .container .foo .bi-instagram {
+        font-size: 30px; }
+      .footer .container .foo .bi-chevron-up {
+        display: none;
+        font-size: 30px; }
+      .footer .container .foo h3 {
+        color: #878787;
+        font-weight: bold;
+        font-size: 20px; }
 
 a:link {
   text-decoration: none;
