@@ -1,87 +1,127 @@
 @import "boton";
+@import "card";
+
+/* Top */
+$color-titulo: #2B65B0;
+$color-texto-serv: #4C5671;
+$color-btn-top-1: #624B9E;
+$color-btn-top-2: #2E2868;
+$color-btn-top-hover-1:#8168c2;
+$color-btn-top-hover-2:#473f8d;
+/* Card */
+$card-bg:#fefefe;
+$card-border: 1px solid #CCC;
+$card-title: #6790D7;
+$color-btn-1: #57E1FD;
+$color-btn-2: #31B6D0;
+$color-btn-hover-1:#78e9ff;
+$color-btn-hover-2:#50c9e1;
+$color-btn-texto: #FFF;
 
 .seccion-infoServ{
-    padding: 0px 70px;
-    height: 600px;
+    @extend .border-box;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 650px;
+    width: 100%;
+    padding: 50px 70px;
     display: flex;
-    flex-flow: row nowrap;
-    gap: 80px;
+    justify-content: center;
+    padding: 0px 70px;
+    gap: 50px;
     .infoServ{
+        flex-basis: 100%;
         display: flex;
         flex-flow: column nowrap;
-        gap: 30px;
+        gap: 40px;
         justify-content: center;
         max-width: 600px;
-        h1{
+        .titulo-serv{
             font-size: 32px;
-            color: #315DA8;
+            color: $color-titulo;
+            font-family: 'Nunito Sans', sans-serif;
         }
-        p{
+        .text-serv{
             font-size: 20px;
+            color: $color-texto-serv;
         }
-        .boton-infoServ{
-            @extend .boton;
+        .boton-equipos{
             align-self: center;
+            @include boton($color-btn-top-1, $color-btn-top-2, $color-btn-top-hover-1, $color-btn-top-hover-2, $color-btn-texto);
+        }
+        .boton-housing{
+            align-self: center;
+            @include boton($color-btn-1, $color-btn-2, $color-btn-hover-1, $color-btn-hover-2, $color-btn-texto);
         }
     }
-    .imgServicio{
-        display: flex;
-        justify-content: center;
-        align-items:center;
+    .img-serv{
+        flex-basis: 100%;
         align-self: center;
-        min-width: 300px;
-        height: 400px;
         img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            object-fit:cover;
         }
     }
 }
 
-.imgServicio-mobile{
-    display: none;
+.rigs{
+    @extend .border-box;
+    min-height: 700px;
+    padding: 0px 70px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    .titulo-rig{
+        font-size: 32px;
+        color: #315DA8;
+    }
+    .contenedor-rig{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 70px;
+        .card{
+            @extend .border-box;
+            padding: 0px 50px;
+            @include card($card-bg, $card-border, $card-title);
+            .card-title{
+                font-family: "DM Sans", sans-serif;
+            }
+            .card-text{
+                font-size: 20px;
+                color: #2f2f2f;
+                text-align: center;
+                font-family: 'Nunito Sans', sans-serif;
+            }
+            .boton{
+                @include boton($color-btn-1, $color-btn-2, $color-btn-hover-1, $color-btn-hover-2, $color-btn-texto);
+            }
+        }
+    }
 }
 
 @media screen and (max-width:768px){
     .seccion-infoServ{
-        padding: 0px 40px;
-        flex-flow: column nowrap;
+        padding: 55px 40px;
         text-align: center;
-        height: 500px;
+        flex-flow: column wrap;
+        justify-content: center;
         .infoServ{
-            align-items: center;
-        }
-        .imgServicio{
-            display: none;
+            align-self: center;
         }
     }
 
-    .imgServicio-mobile{
-        display:flex;
-        width: 100%;
-        height: 400px;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
     .rigs{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 3%;
-        margin: 5%;
+        padding: 50px 40px;
+        gap: 40px;
         .contenedor-rig{
-            text-align: center;
-            border-radius: 10px;
-            border: 0.2em solid #6790D7;
-            margin: 5%;
-            width: 22em;
-            height: 12em;
+            gap: 40px;
+            flex-direction: column;
+        }
+        .card{
+            min-width: 250px;
         }
     }
+
 }

@@ -1,16 +1,21 @@
+@import "boton";
+@import "card";
+
+/* Top */
 $color-titulo: #2E2868;
 $color-texto: #624B9E;
+/* Card*/
+$card-bg:#fefefe;
+$card-border: 1px solid #CCC;
+$card-title: #6790D7;
 $color-btn-1: #57E1FD;
 $color-btn-2: #31B6D0;
 $color-btn-hover-1:#78e9ff;
 $color-btn-hover-2:#50c9e1;
 $color-btn-texto: #FFF;
+/* Contacto */
 $contacto-borde: 5px solid #6790D7;
 $contacto-texto: #315DA8;
-$card-bg:#fefefe;
-$card-border: 1px solid #CCC;
-$card-title: #6790D7;
-
 
 .seccion-top-index{
     @extend .border-box;

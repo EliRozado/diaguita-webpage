@@ -31,6 +31,7 @@
             }
             .bi-chevron-up{
                 display: none;
+                font-size: 30px;
             }
         }
     
@@ -57,18 +58,24 @@
     @media screen and (max-width:768px){
         
         .footer{
+            padding: 50px 0px;
             flex-direction: column;
+            height:auto;
             width: 100%;
             text-align: center;
+            gap: 40px;
             .foo{
                 height: 80px;
                 width: auto;
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
-                padding: 5%;
-                
+                gap: 15px;
+                .bi-chevron-up{
+                    display: block;
+                }   
             }
+            
             
         }
     
