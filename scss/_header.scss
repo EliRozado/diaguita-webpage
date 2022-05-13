@@ -58,13 +58,13 @@ $nav-links-color-mobile:#28a3c9;
     }
 
     .hamburger.active .bar:nth-child(2){ opacity: 0; }
-    .hamburger.active .bar:nth-child(1){ transform: translateY(13px) rotate(45deg); }
-    .hamburger.active .bar:nth-child(3){ transform: translateY(-13px) rotate(-45deg); }
+    .hamburger.active .bar:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
     
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 120px;
+        top: 100px;
         gap: 0;
         flex-direction: column;
         background-color: $nav-mobile-BG;
@@ -75,6 +75,7 @@ $nav-links-color-mobile:#28a3c9;
         .nav-item{ 
             a{
                 color: $nav-links-color-mobile !important;
+                font-size: 1em !important;
             }
         }
     }

@@ -172,19 +172,21 @@ $contacto-texto: #315DA8;
     .seccion-top-index{
         @include border-box;
         padding: 0 30px;
+        min-height: 500px;
         flex-direction: column;
         .cont-text{
             .titulo-top{
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 text-align: center;
             }
             .texto-top{
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 text-align: center;
             }
         }
         .img-top{
             align-items: center;
+            width: 70%;
         }
     }
 

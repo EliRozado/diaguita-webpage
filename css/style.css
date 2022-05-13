@@ -113,13 +113,13 @@ a {
   .hamburger.active .bar:nth-child(2) {
     opacity: 0; }
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(13px) rotate(45deg); }
+    transform: translateY(7px) rotate(45deg); }
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-13px) rotate(-45deg); }
+    transform: translateY(-7px) rotate(-45deg); }
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 120px;
+    top: 100px;
     gap: 0;
     flex-direction: column;
     background-color: #262626;
@@ -128,7 +128,8 @@ a {
     transition: 0.3s;
     padding: 30px 0px; }
     .nav-menu .nav-item a {
-      color: #28a3c9 !important; }
+      color: #28a3c9 !important;
+      font-size: 1em !important; }
   .nav-menu.active {
     left: 0; } }
 
@@ -312,15 +313,17 @@ a {
     /* Firefox, other Gecko */
     box-sizing: border-box;
     padding: 0 30px;
+    min-height: 500px;
     flex-direction: column; }
     .seccion-top-index .cont-text .titulo-top {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       text-align: center; }
     .seccion-top-index .cont-text .texto-top {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       text-align: center; }
     .seccion-top-index .img-top {
-      align-items: center; }
+      align-items: center;
+      width: 70%; }
   .seccion-index {
     padding: 120px 30px 50px 30px; }
     .seccion-index .seccion-titulo {
