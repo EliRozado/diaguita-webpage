@@ -13,10 +13,11 @@ $color-btn-2: #31B6D0;
 $color-btn-texto: #FFF;
 /* Contacto */
 $contacto-borde: 5px solid #6790D7;
+$contacto-borde-mobile: 3px solid #6790D7;
 $contacto-texto: #315DA8;
 
 .seccion-top-index{
-    @extend .border-box;
+    @include border-box;
     min-height: 750px;
     width: 100%;
     display: flex;
@@ -59,7 +60,7 @@ $contacto-texto: #315DA8;
 
 .seccion-index{
     width: 100%;
-    @extend .border-box;
+    @include border-box;
     min-height: 650px;
     padding: 120px 70px 50px 70px;
     display: flex;
@@ -82,7 +83,7 @@ $contacto-texto: #315DA8;
         gap: 70px;
         .card{
             @include card($card-bg, $card-border, $card-title);
-            @extend .border-box;
+            @include border-box;
             max-width: 700px;
             padding: 40px;
             gap: 30px;
@@ -139,7 +140,7 @@ $contacto-texto: #315DA8;
     width: 100%;
     .contenedor{
         @extend .contenedor;
-        @extend .border-box;
+        @include border-box;
         gap: 10px;
         width: 100%;
         justify-content: center;
@@ -169,15 +170,16 @@ $contacto-texto: #315DA8;
 
 @media screen and (max-width:768px){
     .seccion-top-index{
+        @include border-box;
         padding: 0 30px;
         flex-direction: column;
         .cont-text{
             .titulo-top{
-                font-size: 2rem;
+                font-size: 1.5rem;
                 text-align: center;
             }
             .texto-top{
-                font-size: 1.8rem;
+                font-size: 1.2rem;
                 text-align: center;
             }
         }
@@ -188,21 +190,36 @@ $contacto-texto: #315DA8;
 
     .seccion-index{
         padding: 120px 30px 50px 30px;
+        .seccion-titulo{
+            font-size: 1.5rem;
+        }
         .contenedor-card{
             border-radius: 10px;
             display: flex;
             flex-direction: column; 
             font-size: 0.8rem;
             height: 100%;
-            gap: 20px;            
+            gap: 20px; 
+            .card{
+                height: auto;
+                max-width: 300px;
+                .card-title{
+                    font-size: 1rem;
+                    text-align: center;    
+                }
+                
+                img{
+                    width: 100px;
+                }
+            }           
         }
 
         .contenedor-card-contacto{
-            flex-direction: row;
             .card-contacto{
-                max-width: 350px;
+                max-width: 200px;
                 max-height: 200px;
                 padding: 10%;
+                border: $contacto-borde-mobile;
                 .img{
                     height: 8vh;
                 }

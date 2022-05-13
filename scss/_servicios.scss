@@ -17,7 +17,7 @@ $color-btn-hover-2:#50c9e1;
 $color-btn-texto: #FFF;
 
 .seccion-infoServ{
-    @extend .border-box;
+    @include border-box;
     font-family: 'DM Sans', sans-serif;
     min-height: 650px;
     width: 100%;
@@ -66,7 +66,7 @@ $color-btn-texto: #FFF;
 }
 
 .rigs{
-    @extend .border-box;
+    @include border-box;
     min-height: 700px;
     padding: 0px 70px;
     display: flex;
@@ -84,7 +84,7 @@ $color-btn-texto: #FFF;
         align-items: center;
         gap: 70px;
         .card{
-            @extend .border-box;
+            @include border-box;
             padding: 0px 50px;
             @include card($card-bg, $card-border, $card-title);
             .card-title{
@@ -112,18 +112,38 @@ $color-btn-texto: #FFF;
         .infoServ{
             align-self: center;
         }
+        .titulo-serv{
+            font-size: 20px;
+            color: $color-titulo;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        .text-serv{
+            font-size: 16px;
+            color: $color-texto-serv;
+        }
     }
 
     .rigs{
-        padding: 50px 40px;
+        padding: 50px 30px;
         gap: 40px;
+        .titulo-rig{
+            font-size: 1.5rem;
+        }
         .contenedor-rig{
             gap: 40px;
             flex-direction: column;
+            .card{
+                max-width: 300px;
+            }
+            .card-title{
+                font-size: 16px;
+                text-align: center;    
+            }
+            .card-text{
+                font-size: 14px;
+            }
         }
-        .card{
-            min-width: 250px;
-        }
+        
     }
 
 }

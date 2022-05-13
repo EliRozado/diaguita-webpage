@@ -3,11 +3,11 @@
     width: 100%;
     height: 350px;
     background-color: #C1C0C3;  
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-family: 'Nunito sans', sans-serif;
     color: rgb(245, 240, 240);
         .container{
-            @extend .border-box;
+            @include border-box;
             @extend .contenedor;
             padding: 70px;
             width: 100%;
@@ -57,6 +57,7 @@
         .footer{
             height: auto;
             width: 100%;
+            font-size: 1em;
             .container{
                 display: flex;
                 flex-direction: column;

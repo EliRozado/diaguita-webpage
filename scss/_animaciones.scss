@@ -1,14 +1,7 @@
-.anim-des-der{
-    animation: deslizar-desde-der ease 2s forwards;
-}
-
-.anim-des-izq{
-    animation: deslizar-desde-izq ease 2s forwards;
-}
-
 .anim-des-abajo{
     animation: deslizar-hacia-abajo ease 2s forwards;
 }
+
 
 /* animations */
 @keyframes deslizar-hacia-abajo{

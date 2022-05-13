@@ -18,21 +18,26 @@ a {
   height: auto;
   margin: auto; }
 
-.border-box, .seccion-top-index, .seccion-index, .seccion-index .contenedor-card .card, .seccion-index .contenedor-card-contacto .card, .cualidades .contenedor, .seccion-infoServ, .rigs, .rigs .contenedor-rig .card, .footer .container {
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box; }
-
 .logo img {
   height: 70px; }
 
-.anim-des-der {
-  animation: deslizar-desde-der ease 2s forwards; }
-
-.anim-des-izq {
-  animation: deslizar-desde-izq ease 2s forwards; }
+@media screen and (max-width: 768px) {
+  .border-box {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box; }
+  .contenedor, .cualidades .contenedor, .footer .container {
+    width: 100vw;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box; }
+  .logo img {
+    height: 50px; } }
 
 .anim-des-abajo {
   animation: deslizar-hacia-abajo ease 2s forwards; }
@@ -72,7 +77,6 @@ a {
   .header .nav {
     display: flex;
     flex-direction: row;
-    height: 70px;
     gap: 40px;
     padding: 25px 70px; }
     .header .nav .nav-menu {
@@ -86,17 +90,17 @@ a {
         font-size: 24px;
         color: #2D85BD; }
     .header .nav .hamburger {
+      align-self: center;
       display: none;
       cursor: pointer;
       padding: 10px 10px;
       border: 1px solid #878787;
-      border-radius: 5px;
-      background-color: #D8D8D8; }
+      border-radius: 5px; }
       .header .nav .hamburger .bar {
         display: block;
-        width: 50px;
-        height: 7px;
-        margin: 6px auto;
+        width: 25px;
+        height: 3px;
+        margin: 4px auto;
         transition: all 0.3s ease-in-out;
         background-color: #878787; }
 
@@ -132,6 +136,11 @@ a {
 /* Card*/
 /* Contacto */
 .seccion-top-index {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
   min-height: 750px;
   width: 100%;
   display: flex;
@@ -168,6 +177,11 @@ a {
 
 .seccion-index {
   width: 100%;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
   min-height: 650px;
   padding: 120px 70px 50px 70px;
   display: flex;
@@ -198,6 +212,11 @@ a {
       border: 1px solid #CCC;
       border-radius: 20px;
       gap: 30px;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
       max-width: 700px;
       padding: 40px;
       gap: 30px; }
@@ -225,6 +244,9 @@ a {
         .seccion-index .contenedor-card .card .boton:active, .seccion-index .contenedor-card-contacto .card .boton:active {
           background-image: none;
           background-color: #57E1FD; }
+        @media screen and (max-width: 768px) {
+          .seccion-index .contenedor-card .card .boton, .seccion-index .contenedor-card-contacto .card .boton {
+            font-size: 1rem; } }
   .seccion-index .contenedor-card-contacto .card-contacto {
     border: 5px solid #6790D7;
     color: #315DA8;
@@ -255,6 +277,11 @@ a {
   height: 15%;
   width: 100%; }
   .cualidades .contenedor, .cualidades .footer .container, .footer .cualidades .container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
     gap: 10px;
     width: 100%;
     justify-content: center;
@@ -279,18 +306,25 @@ a {
 
 @media screen and (max-width: 768px) {
   .seccion-top-index {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
     padding: 0 30px;
     flex-direction: column; }
     .seccion-top-index .cont-text .titulo-top {
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-align: center; }
     .seccion-top-index .cont-text .texto-top {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
       text-align: center; }
     .seccion-top-index .img-top {
       align-items: center; }
   .seccion-index {
     padding: 120px 30px 50px 30px; }
+    .seccion-index .seccion-titulo {
+      font-size: 1.5rem; }
     .seccion-index .contenedor-card, .seccion-index .contenedor-card-contacto {
       border-radius: 10px;
       display: flex;
@@ -298,14 +332,21 @@ a {
       font-size: 0.8rem;
       height: 100%;
       gap: 20px; }
-    .seccion-index .contenedor-card-contacto {
-      flex-direction: row; }
-      .seccion-index .contenedor-card-contacto .card-contacto {
-        max-width: 350px;
-        max-height: 200px;
-        padding: 10%; }
-        .seccion-index .contenedor-card-contacto .card-contacto .img {
-          height: 8vh; }
+      .seccion-index .contenedor-card .card, .seccion-index .contenedor-card-contacto .card {
+        height: auto;
+        max-width: 300px; }
+        .seccion-index .contenedor-card .card .card-title, .seccion-index .contenedor-card-contacto .card .card-title {
+          font-size: 1rem;
+          text-align: center; }
+        .seccion-index .contenedor-card .card img, .seccion-index .contenedor-card-contacto .card img {
+          width: 100px; }
+    .seccion-index .contenedor-card-contacto .card-contacto {
+      max-width: 200px;
+      max-height: 200px;
+      padding: 10%;
+      border: 3px solid #6790D7; }
+      .seccion-index .contenedor-card-contacto .card-contacto .img {
+        height: 8vh; }
   .cualidades .item img {
     max-height: 70px; }
   .cualidades .item p {
@@ -314,6 +355,11 @@ a {
 /* Top */
 /* Card */
 .seccion-infoServ {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
   min-height: 650px;
   width: 100%;
@@ -355,6 +401,9 @@ a {
       .seccion-infoServ .infoServ .boton-equipos:active {
         background-image: none;
         background-color: #624B9E; }
+      @media screen and (max-width: 768px) {
+        .seccion-infoServ .infoServ .boton-equipos {
+          font-size: 1rem; } }
     .seccion-infoServ .infoServ .boton-housing {
       align-self: center;
       background-image: linear-gradient(180deg, #57E1FD 0%, #31B6D0 100%);
@@ -373,6 +422,9 @@ a {
       .seccion-infoServ .infoServ .boton-housing:active {
         background-image: none;
         background-color: #57E1FD; }
+      @media screen and (max-width: 768px) {
+        .seccion-infoServ .infoServ .boton-housing {
+          font-size: 1rem; } }
   .seccion-infoServ .img-serv {
     flex-basis: 100%;
     align-self: center; }
@@ -383,6 +435,11 @@ a {
       object-fit: cover; }
 
 .rigs {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
   min-height: 700px;
   padding: 0px 70px;
   display: flex;
@@ -399,6 +456,11 @@ a {
     align-items: center;
     gap: 70px; }
     .rigs .contenedor-rig .card {
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
       padding: 0px 50px;
       display: flex;
       flex-direction: column;
@@ -437,6 +499,9 @@ a {
         .rigs .contenedor-rig .card .boton:active {
           background-image: none;
           background-color: #57E1FD; }
+        @media screen and (max-width: 768px) {
+          .rigs .contenedor-rig .card .boton {
+            font-size: 1rem; } }
 
 @media screen and (max-width: 768px) {
   .seccion-infoServ {
@@ -446,23 +511,42 @@ a {
     justify-content: center; }
     .seccion-infoServ .infoServ {
       align-self: center; }
+    .seccion-infoServ .titulo-serv {
+      font-size: 20px;
+      color: #2B65B0;
+      font-family: 'Nunito Sans', sans-serif; }
+    .seccion-infoServ .text-serv {
+      font-size: 16px;
+      color: #4C5671; }
   .rigs {
-    padding: 50px 40px;
+    padding: 50px 30px;
     gap: 40px; }
+    .rigs .titulo-rig {
+      font-size: 1.5rem; }
     .rigs .contenedor-rig {
       gap: 40px;
       flex-direction: column; }
-    .rigs .card {
-      min-width: 250px; } }
+      .rigs .contenedor-rig .card {
+        max-width: 300px; }
+      .rigs .contenedor-rig .card-title {
+        font-size: 16px;
+        text-align: center; }
+      .rigs .contenedor-rig .card-text {
+        font-size: 14px; } }
 
 .footer {
   width: 100%;
   height: 350px;
   background-color: #C1C0C3;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-family: 'Nunito sans', sans-serif;
   color: #f5f0f0; }
   .footer .container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
     padding: 70px;
     width: 100%;
     justify-content: space-between;
@@ -498,7 +582,8 @@ a {
 @media screen and (max-width: 768px) {
   .footer {
     height: auto;
-    width: 100%; }
+    width: 100%;
+    font-size: 1em; }
     .footer .container {
       display: flex;
       flex-direction: column;

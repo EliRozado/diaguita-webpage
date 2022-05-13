@@ -14,7 +14,6 @@ $nav-links-color-mobile:#28a3c9;
     .nav{
         display: flex;
         flex-direction: row;
-        height: 70px;
         gap: 40px;
         padding: 25px 70px;
         .nav-menu{
@@ -30,17 +29,17 @@ $nav-links-color-mobile:#28a3c9;
             }
         }
             .hamburger{
+                align-self: center;
                 display: none;
                 cursor: pointer;
                 padding: 10px 10px;
                 border: 1px solid $hamburger-border;
                 border-radius: 5px;
-                background-color: $hamburger-BG;
                 .bar{
                     display: block;
-                    width: 50px;
-                    height: 7px;
-                    margin: 6px auto;
+                    width: 25px;
+                    height: 3px;
+                    margin: 4px auto;
                     transition: all 0.3s ease-in-out; 
                     background-color: $hamburger-bars;
                 }
