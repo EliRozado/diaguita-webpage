@@ -1,15 +1,21 @@
-@mixin boton($color-1, $color-2, $hover-1, $hover-2, $text){
-    background: linear-gradient(180deg, $color-1 0%, $color-2 100%);
+@mixin boton($color-1, $color-2, $text){
+    background-image: linear-gradient(180deg, $color-1 0%, $color-2 100%);
     padding: 10px 30px;
     border-radius: 5px;
     font-size: 1.3rem;
     text-decoration: none;
     color: $text;
     font-family: 'Nunito Sans', sans-serif;
+    opacity: 1;
+    transition: opacity 300ms ease;
     &:visited{
         color: $text;
     }
-    &:hover{
-        background: linear-gradient(180deg, $hover-1 0%, $hover-2 100%);
-    }  
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active{
+        background-image: none;
+        background-color: $color-1;
+    }
 }

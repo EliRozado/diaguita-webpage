@@ -9,15 +9,24 @@ $color-fondo: #fff;
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 body{
     background-color: $color-fondo;
     font-family: $fuente-nunito;
 }
 
+a{
+    text-decoration: none;
+}
+
 .contenedor{
-    max-width: 100%;
+    max-width: 1440px;
     height: auto;
-    margin:auto;
+    margin: auto;
 }
 
 .border-box{
@@ -29,11 +38,8 @@ body{
 .logo img{
     height: 70px;
 }
-.logo1 img{
-    height: auto;
-    width: 25vw;
-}
 
+@import "animaciones";
 @import "header";
 @import "sections";
 @import "servicios";

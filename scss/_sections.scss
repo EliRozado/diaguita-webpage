@@ -10,8 +10,6 @@ $card-border: 1px solid #CCC;
 $card-title: #6790D7;
 $color-btn-1: #57E1FD;
 $color-btn-2: #31B6D0;
-$color-btn-hover-1:#78e9ff;
-$color-btn-hover-2:#50c9e1;
 $color-btn-texto: #FFF;
 /* Contacto */
 $contacto-borde: 5px solid #6790D7;
@@ -26,6 +24,7 @@ $contacto-texto: #315DA8;
     justify-content: center;
     padding: 0px 70px;
     gap: 50px;
+    margin-top: 120px;
     .cont-text{
         flex-basis: 100%;
         display: flex;
@@ -47,9 +46,12 @@ $contacto-texto: #315DA8;
     }
     .img-top{
         flex-basis: 100%;
+        width: 50%;
         align-self: center;
+        justify-content: center;
         img{
-            max-width: 100%;
+            width: 100%;
+            height: 100%;
             object-fit:cover;
         } 
     } 
@@ -59,7 +61,7 @@ $contacto-texto: #315DA8;
     width: 100%;
     @extend .border-box;
     min-height: 650px;
-    padding: 50px 70px;
+    padding: 120px 70px 50px 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,50 +78,29 @@ $contacto-texto: #315DA8;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        justify-content: center;
         gap: 70px;
-        
-        ;
-        .card1{
+        .card{
             @include card($card-bg, $card-border, $card-title);
-            .boton{
-                @include boton($color-btn-1, $color-btn-2, $color-btn-hover-1, $color-btn-hover-2, $color-btn-texto);
-                
-            }
-            img{
-                width: 200px;
-            }
-            .card-title{
-                padding-bottom: 20px;
-                text-align: center;
-                
-            }
-            transition: width 1s;
-            width: 100%;
-            :hover{
-                width: 75%;
-            
-            }
+            @extend .border-box;
+            max-width: 700px;
+            padding: 40px;
+            gap: 30px;
 
-        }
-        .card2{
-            @include card($card-bg, $card-border, $card-title);
-            .boton{
-                @include boton($color-btn-1, $color-btn-2, $color-btn-hover-1, $color-btn-hover-2, $color-btn-texto);
-            }
             img{
                 width: 200px;
             }
             .card-title{
-                padding-bottom: 20px;
-                text-align: center;
+                text-align: center;    
             }
-            transition: width 1s;
-            width: 100%;
-            :hover{
-                width: 75%;
-            
-            }
+            .boton{
+                @include boton($color-btn-1, $color-btn-2, $color-btn-texto);
+                        
+            }               
         }
+    }
+    .contenedor-card-contacto{
+        @extend .contenedor-card;
         .card-contacto{
             border: $contacto-borde;
             color: $contacto-texto;
@@ -128,52 +109,24 @@ $contacto-texto: #315DA8;
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 30px;
             width: 350px;
             height: 350px;
-            font-size: 1.2rem;
-            .bi{
+            font-size: 1.3em;
+            .img{
                 height: 60px;
             }
-        }
-    } 
-}
-.seccion-index1{
-    @extend .border-box;
-    min-height: 650px;
-    padding: 50px 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    .seccion-titulo{
-        font-size: 2rem;
-        color: #315DA8;
-    }
-    .contenedor-card1{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 70px;
-        .card-contacto{
-            border: $contacto-borde;
-            color: $contacto-texto;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            width: 350px;
-            height: 350px;
-            font-size: 1.2rem;
-            .bi{
-                height: 60px;
+            .titulo{
+                font-weight: bold;
+            }
+            a{
+                color: $contacto-texto;
+                transition: all 300ms ease;
+                &:hover{
+                    color: #518bf0;
+                }
             }
         }
-        
-       
     } 
 }
 
@@ -192,243 +145,80 @@ $contacto-texto: #315DA8;
         justify-content: center;
         flex-direction: row;
         display: flex;
-        
-        
         .item{
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
             text-align: center;
             height: 10%;
-            align-content: space-between;
-            padding: 7%;
+            padding: 5% 0%; 
             margin: auto;
             p{
-                font-size: 2.5rem;
+                font-size: 30px;
+                font-family: $fuente-nunito;
                 color: #2B65B0;
             }
             img{
                 flex-basis: 100%;
                 align-self: center;
-                max-width: 250px;
+                max-width: 200px;
             }
         }
     }
 }
 
 @media screen and (max-width:768px){
-    
-    
     .seccion-top-index{
-        padding: 10px;
+        padding: 0 30px;
         flex-direction: column;
         .cont-text{
             .titulo-top{
                 font-size: 2rem;
                 text-align: center;
             }
-
+            .texto-top{
+                font-size: 1.8rem;
+                text-align: center;
+            }
         }
-        
-        p{
-            font-size: 1rem;
-        }
-        
-        
-    
         .img-top{
             align-items: center;
         }
     }
-    .seccion-index1{
-        width: 100%;
-        box-sizing: border-box;
-        padding: 15%;
-        
-        
-        
-        
-        .contenedor-card1{
-            border-radius: 10px;
-            display: flex;
-            flex-direction: row; 
-            text-align: center;
-            text-size-adjust: auto;
-            font-size: 0.8rem;
-            width: 130%;
-            height: 100%;
-            gap: 20px;
-            
-            
-            
 
-            .card-contacto{
-                .bi{
-                    width: auto;
-                    height: 8vw;
-                        
-                }
-                
-                height: 100%;
-                padding: 5%;
-                margin: 10% auto;
-                box-sizing: border-box;
-                
-
-            }
-            
-        }
-        
-    }
     .seccion-index{
-        padding: 10px;
-        width: 100%;
-        
+        padding: 120px 30px 50px 30px;
         .contenedor-card{
             border-radius: 10px;
-            align-content: center;
-            text-align: center;
-            padding: 10%;
             display: flex;
-            flex-direction: column;
-            
-          
-            .card1{
-                width: 80%;
-                height: 100%;
-                display: flex;
-                flex-direction: row;
+            flex-direction: column; 
+            font-size: 0.8rem;
+            height: 100%;
+            gap: 20px;            
+        }
+
+        .contenedor-card-contacto{
+            flex-direction: row;
+            .card-contacto{
+                max-width: 350px;
+                max-height: 200px;
                 padding: 10%;
-               
-                border-radius: 10px;
-                gap: 20px;
-                transition: width 1s;
-                
-                :hover{
-                    width: 90%;
-                    
-            
-                }
-                .img1{
-                    
-                    height: auto;
-                    align-content: flex-start;
-                    
-                }
-                
-                .text1{
-                
-                    padding: 5%;
-                    justify-items: center;
-                    font-size: 1rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    
-                   
-
-                    .card-title{
-                        color: $card-title;
-                        font-size: 1.2rem;
-                    }
-                    
-                    .boton{
-                        
-                        width: 6rem;
-                        font-size: 1rem;
-                        
-
-                    }
+                .img{
+                    height: 8vh;
                 }
             }
-            .card2{
-                width: 80%;
-                height: 100%;
-                display: flex;
-                flex-direction:row-reverse;
-                padding: 10%;
-                display: flex;
-                border-radius: 10px;
-                gap: 20px;
-                transition: width 1s;
-                
-                :hover{
-                    width: 90%;
-            
-                }
-    
-                
-                .img2{
-                    
-                    height: auto;
-
-                }
-                
-                
-                .text2{
-                    
-                    padding: 5%;
-                    font-size: 1rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    .card-title{
-                        color: $card-title;
-                        font-size: 1.2rem;
-                    }
-                   
-                    
-                    
-                    .boton{
-                        
-                        width: 6rem;
-                        font-size: 1rem;
-                        
-                    }
-                }
-            }
-
         }
         
     }
 
     .cualidades{
-        height: 255px;
-        width: 100%;
-        margin: auto;
-        padding-bottom: 2%;
-        
-        .contenedor{
-            gap: 10px;
-            
-            display: flex;
-            flex-direction: row;
-            align-content: space-between;
-            width: 95%;
-            
-            
-            
-            .item{
-                height: 31vw;
-                width: auto;
-                padding-bottom: 7px;
-                
-                img{
-                    width: auto;
-                    height: 60%;
-                    
-
-                }
-                p{
-                    font-size: 1rem;
-                    padding-bottom: 12%;
-                    
-                }
-                display: flex;
-                flex-direction: column;
-                align-content: space-around;
-                
+        .item{
+            img{
+                max-height: 70px;
+            }
+            p{
+                font-size: 20px !important;
             }
         }
-    }
+    }    
 }

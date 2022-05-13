@@ -6,8 +6,6 @@ $color-titulo: #2B65B0;
 $color-texto-serv: #4C5671;
 $color-btn-top-1: #624B9E;
 $color-btn-top-2: #2E2868;
-$color-btn-top-hover-1:#8168c2;
-$color-btn-top-hover-2:#473f8d;
 /* Card */
 $card-bg:#fefefe;
 $card-border: 1px solid #CCC;
@@ -23,7 +21,8 @@ $color-btn-texto: #FFF;
     font-family: 'DM Sans', sans-serif;
     min-height: 650px;
     width: 100%;
-    padding: 50px 70px;
+    padding: 0px 70px;
+    margin-top: 120px;
     display: flex;
     justify-content: center;
     padding: 0px 70px;
@@ -46,11 +45,11 @@ $color-btn-texto: #FFF;
         }
         .boton-equipos{
             align-self: center;
-            @include boton($color-btn-top-1, $color-btn-top-2, $color-btn-top-hover-1, $color-btn-top-hover-2, $color-btn-texto);
+            @include boton($color-btn-top-1, $color-btn-top-2, $color-btn-texto);
         }
         .boton-housing{
             align-self: center;
-            @include boton($color-btn-1, $color-btn-2, $color-btn-hover-1, $color-btn-hover-2, $color-btn-texto);
+            @include boton($color-btn-1, $color-btn-2, $color-btn-texto);
             
         }
     }
@@ -59,6 +58,8 @@ $color-btn-texto: #FFF;
         align-self: center;
         img{
             max-width: 100%;
+            display: block;
+            margin: auto;
             object-fit:cover;
         }
     }
@@ -96,7 +97,7 @@ $color-btn-texto: #FFF;
                 font-family: 'Nunito Sans', sans-serif;
             }
             .boton{
-                @include boton($color-btn-1, $color-btn-2, $color-btn-hover-1, $color-btn-hover-2, $color-btn-texto);
+                @include boton($color-btn-1, $color-btn-2, $color-btn-texto);
             }
         }
     }

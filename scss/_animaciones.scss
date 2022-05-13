@@ -1,0 +1,46 @@
+.anim-des-der{
+    animation: deslizar-desde-der ease 2s forwards;
+}
+
+.anim-des-izq{
+    animation: deslizar-desde-izq ease 2s forwards;
+}
+
+.anim-des-abajo{
+    animation: deslizar-hacia-abajo ease 2s forwards;
+}
+
+/* animations */
+@keyframes deslizar-hacia-abajo{
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* header animation */
+@keyframes deslizar-desde-der{
+    from {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes deslizar-desde-izq{
+    from {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
