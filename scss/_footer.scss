@@ -2,12 +2,13 @@
 .footer{
     @extend .border-box;
     width: 100%;
-    height: 280px;
+    height: 350px;
     background-color: #C1C0C3;  
     font-size: 1rem;
     font-family: 'Nunito sans', sans-serif;
     color: #fff;
     text-decoration: none;
+    padding: 3%;
         .container{
             @extend .contenedor;
             width: 100%;
@@ -15,12 +16,12 @@
             flex-direction: row;
             display: flex;
             .foo{
-                height: 80px;
-                width: auto;
+                height: 120px;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                padding: 5%;
+                
                 gap: 10px;
                 a{
                     color: #fff;
@@ -63,25 +64,25 @@
     @media screen and (max-width:768px){
         
         .footer{
-            padding: 50px 0px;
-            flex-direction: column;
-            height:auto;
+            height: 550px;
             width: 100%;
-            text-align: center;
-            gap: 40px;
-            .foo{
-                height: 80px;
-                width: auto;
+            .container{
                 display: flex;
                 flex-direction: column;
-                justify-content:center;
-                gap: 15px;
-                .bi-chevron-up{
-                    display: block;
-                }   
-            }
-            
-            
+                width: 100%;
+                text-align: center;
+                align-content: center;
+                margin: auto;
+                padding: 2%;
+                height: 100%;
+                .foo{
+                    padding: 3%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 200px;
+                    
+                }
+            }   
         }
     
     }

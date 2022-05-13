@@ -15,7 +15,8 @@ body{
 }
 
 .contenedor{
-    max-width: 1440px;
+    max-width: 100%;
+    height: auto;
     margin:auto;
 }
 
@@ -27,6 +28,10 @@ body{
 
 .logo img{
     height: 70px;
+}
+.logo1 img{
+    height: auto;
+    width: 25vw;
 }
 
 @import "header";

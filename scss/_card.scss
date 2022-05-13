@@ -1,16 +1,18 @@
 @mixin card($card-bg, $card-border, $card-title) {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     height: 500px;
-    width: 400px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background-color: $card-bg;
     border: $card-border;
     border-radius: 20px;
-    gap: 35px;
+    gap: 30px;
+    
+    
     .card-title{
         color: $card-title;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }

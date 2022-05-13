@@ -51,6 +51,7 @@ $color-btn-texto: #FFF;
         .boton-housing{
             align-self: center;
             @include boton($color-btn-1, $color-btn-2, $color-btn-hover-1, $color-btn-hover-2, $color-btn-texto);
+            
         }
     }
     .img-serv{
