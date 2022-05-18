@@ -65,7 +65,7 @@ $contacto-texto: #315DA8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: center;
     gap: 40px;
     .seccion-titulo{
@@ -381,7 +381,7 @@ $contacto-texto: #315DA8;
                 align-items: center;
                 justify-content: center;
                 align-content: center;
-                min-height: 26vh;
+                min-height: 26vw;
                 .texto1{
                     
                     .card-title{
