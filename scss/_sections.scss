@@ -18,19 +18,18 @@ $contacto-texto: #315DA8;
 
 .seccion-top-index{
     @include border-box;
-    min-height: 750px;
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: center;
-    padding: 0px 70px;
+    padding: 10%;
     gap: 50px;
     margin-top: 120px;
     .cont-text{
         flex-basis: 100%;
         display: flex;
-        flex-flow:column wrap;
-        gap: 50px;
+        flex-direction: column;
+        gap: 20px;
         justify-content: center;
         .titulo-top{
             font-family: $fuente-titulo;
@@ -61,12 +60,12 @@ $contacto-texto: #315DA8;
 .seccion-index{
     width: 100%;
     @include border-box;
-    min-height: 650px;
-    padding: 120px 70px 50px 70px;
+    min-height: 400px;
+    padding: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     gap: 40px;
     .seccion-titulo{
@@ -77,29 +76,84 @@ $contacto-texto: #315DA8;
         width: 100%;
         height: 100%;
         display: flex;
-        flex-flow: row nowrap;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 70px;
-        .card{
+        gap: 50px;
+        position: relative;
+        .card1{
             @include card($card-bg, $card-border, $card-title);
             @include border-box;
-            max-width: 700px;
-            padding: 40px;
-            gap: 30px;
+            width: 100vw;
+            height: 85vh;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            padding: 20%;
+            
 
-            img{
-                width: 200px;
+            
+            .img1{
+                width: 100%;
+                
+                img{
+                    max-width: 200px; 
+                    
+                }
+                
+                 
             }
-            .card-title{
-                text-align: center;    
+            .texto1{
+                
+                .card-title{
+                    text-align: center; 
+                    padding: 10%;
+                    
+                      
+                }
+                .boton{
+                    @include boton($color-btn-1, $color-btn-2, $color-btn-texto);
+                    
+                    
+                            
+                } 
             }
-            .boton{
-                @include boton($color-btn-1, $color-btn-2, $color-btn-texto);
-                        
-            }               
+                          
         }
-    }
+        .card2{
+            @include card($card-bg, $card-border, $card-title);
+            @include border-box;
+            width: 100vw;
+            height: 85vh;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            padding: 20%;
+
+            .img2{
+                width: 100%;
+                img{
+                     
+                    max-width: 200px;
+                    
+                }
+                   
+            }
+        }
+            .texto2{
+
+                .card-title{
+                    text-align: center;  
+                    padding: 15%;
+                }
+                .boton{
+                    @include boton($color-btn-1, $color-btn-2, $color-btn-texto);
+                            
+                } 
+            }
+                          
+        }
+    
     .contenedor-card-contacto{
         @extend .contenedor-card;
         .card-contacto{
@@ -107,7 +161,7 @@ $contacto-texto: #315DA8;
             color: $contacto-texto;
             border-radius: 20px;
             display: flex;
-            flex-flow: column nowrap;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 30px;
@@ -133,7 +187,7 @@ $contacto-texto: #315DA8;
 
 .cualidades{
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: space-around;
     background-color: #ECECEC;
     height: 15%;
@@ -171,8 +225,7 @@ $contacto-texto: #315DA8;
 @media screen and (max-width:768px){
     .seccion-top-index{
         @include border-box;
-        padding: 0 30px;
-        min-height: 500px;
+        padding: 10%;
         flex-direction: column;
         .cont-text{
             .titulo-top{
@@ -191,7 +244,7 @@ $contacto-texto: #315DA8;
     }
 
     .seccion-index{
-        padding: 120px 30px 50px 30px;
+        padding: 5%;
         .seccion-titulo{
             font-size: 1.5rem;
         }
@@ -199,31 +252,82 @@ $contacto-texto: #315DA8;
             border-radius: 10px;
             display: flex;
             flex-direction: column; 
+            align-content: center;
+            justify-content: center;
             font-size: 0.8rem;
-            height: 100%;
-            gap: 20px; 
-            .card{
+            width: 100%;
+            height: 50%;
+            gap: 10px; 
+            padding: 10%;
+            .card1{
                 height: auto;
-                max-width: 300px;
-                .card-title{
-                    font-size: 1rem;
-                    text-align: center;    
+                width: 90%;
+                gap: 10px;
+                display: flex;
+                flex-direction: row;
+                padding: 10%;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                .texto1{
+                    
+                    .card-title{
+                        font-size: 1rem;
+                        align-content: center;
+                        padding: 10%;
+
+                    }
                 }
-                
-                img{
-                    width: 100px;
+                .img1{
+                    img{
+                        height: 16vw;
+                        padding: 10%;
+                        justify-content: center;
+           
+                    }
                 }
-            }           
+            } 
+            .card2{
+                height: auto;
+                width: 90%;
+                gap: 10px;
+                display: flex;
+                flex-direction: row-reverse;
+                align-content: center;
+                padding: 10%;
+                justify-content: center;
+                .texto2{
+                    
+                    .card-title{
+                        font-size: 1rem;
+                        text-align: center; 
+                        padding: 10%;
+                          
+                    }
+                }
+                .img2{
+                    img{
+                        height: 16vw;
+                        padding: 10%;
+                        justify-content: center;
+                    }
+                }
+            }          
         }
 
         .contenedor-card-contacto{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
             .card-contacto{
-                max-width: 200px;
-                max-height: 200px;
+                width: 20%;
+                height: 15%;
                 padding: 10%;
                 border: $contacto-borde-mobile;
+                display: flex;
+                flex-direction: column;
                 .img{
-                    height: 8vh;
+                    height: 6vw;
                 }
             }
         }
@@ -240,4 +344,98 @@ $contacto-texto: #315DA8;
             }
         }
     }    
+}
+@media screen and (max-width:400px){
+    
+    .seccion-index{
+        padding: 5%;
+        .seccion-titulo{
+            font-size: 1.5rem;
+        }
+        .contenedor-card{
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column; 
+            align-content: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            width: 100%;
+            height: 50%;
+            gap: 15px; 
+            padding: 10%;
+            .card1{
+                height: auto;
+                width: 80%;
+                gap: 10px;
+                display: flex;
+                flex-direction: row;
+                padding: 10%;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                .texto1{
+                    
+                    .card-title{
+                        font-size: 1rem;
+                        align-content: center;
+                        padding: 10%;
+
+                    }
+                }
+                .img1{
+                    img{
+                        height: 16vw;
+                        padding: 10%;
+                        justify-content: center;
+           
+                    }
+                }
+            } 
+            .card2{
+                height: auto;
+                width: 80%;
+                gap: 10px;
+                display: flex;
+                flex-direction: row-reverse;
+                align-content: center;
+                padding: 10%;
+                justify-content: center;
+                .texto2{
+                    
+                    .card-title{
+                        font-size: 1rem;
+                        text-align: center; 
+                        padding: 10%;
+                          
+                    }
+                }
+                .img2{
+                    img{
+                        height: 16vw;
+                        padding: 10%;
+                        justify-content: center;
+                    }
+                }
+            }          
+        }
+
+        .contenedor-card-contacto{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            .card-contacto{
+                width: 20%;
+                height: 10%;
+                padding: 10%;
+                border: $contacto-borde-mobile;
+                display: flex;
+                flex-direction: column;
+                .img{
+                    height: 4vw;
+                }
+            }
+        }
+        
+    }
+
 }

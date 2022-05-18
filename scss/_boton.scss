@@ -5,6 +5,8 @@
     font-size: 1.3rem;
     text-decoration: none;
     color: $text;
+    padding: 10px;
+    height: 20px;
     font-family: 'Nunito Sans', sans-serif;
     opacity: 1;
     transition: opacity 300ms ease;
@@ -20,5 +22,8 @@
     }
     @media screen and (max-width:768px){
         font-size: 1rem;
+    }
+    @media screen and (max-width:360px){
+        font-size: 0.7rem;
     }
 }

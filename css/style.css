@@ -14,7 +14,7 @@ a {
   text-decoration: none; }
 
 .contenedor, .cualidades .contenedor, .footer .container {
-  max-width: 1440px;
+  width: 100%;
   height: auto;
   margin: auto; }
 
@@ -142,19 +142,18 @@ a {
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
   box-sizing: border-box;
-  min-height: 750px;
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   justify-content: center;
-  padding: 0px 70px;
+  padding: 10%;
   gap: 50px;
   margin-top: 120px; }
   .seccion-top-index .cont-text {
     flex-basis: 100%;
     display: flex;
-    flex-flow: column wrap;
-    gap: 50px;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center; }
     .seccion-top-index .cont-text .titulo-top {
       font-family: "Russo One", sans-serif;
@@ -183,12 +182,12 @@ a {
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
   box-sizing: border-box;
-  min-height: 650px;
-  padding: 120px 70px 50px 70px;
+  min-height: 400px;
+  padding: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   gap: 40px; }
   .seccion-index .seccion-titulo {
@@ -198,14 +197,15 @@ a {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 70px; }
-    .seccion-index .contenedor-card .card, .seccion-index .contenedor-card-contacto .card {
+    gap: 50px;
+    position: relative; }
+    .seccion-index .contenedor-card .card1, .seccion-index .contenedor-card-contacto .card1 {
       display: flex;
       flex-direction: column;
-      height: 500px;
+      height: auto;
       width: 100%;
       align-items: center;
       justify-content: center;
@@ -213,47 +213,117 @@ a {
       border: 1px solid #CCC;
       border-radius: 20px;
       gap: 30px;
+      padding: 10%;
       -webkit-box-sizing: border-box;
       /* Safari/Chrome, other WebKit */
       -moz-box-sizing: border-box;
       /* Firefox, other Gecko */
       box-sizing: border-box;
-      max-width: 700px;
-      padding: 40px;
-      gap: 30px; }
-      .seccion-index .contenedor-card .card .card-title, .seccion-index .contenedor-card-contacto .card .card-title {
+      width: 100vw;
+      height: 85vh;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 20%; }
+      .seccion-index .contenedor-card .card1 .card-title, .seccion-index .contenedor-card-contacto .card1 .card-title {
         color: #6790D7;
         font-size: 1.5rem; }
-      .seccion-index .contenedor-card .card img, .seccion-index .contenedor-card-contacto .card img {
-        width: 200px; }
-      .seccion-index .contenedor-card .card .card-title, .seccion-index .contenedor-card-contacto .card .card-title {
-        text-align: center; }
-      .seccion-index .contenedor-card .card .boton, .seccion-index .contenedor-card-contacto .card .boton {
+      .seccion-index .contenedor-card .card1 .img1, .seccion-index .contenedor-card-contacto .card1 .img1 {
+        width: 100%; }
+        .seccion-index .contenedor-card .card1 .img1 img, .seccion-index .contenedor-card-contacto .card1 .img1 img {
+          max-width: 200px; }
+      .seccion-index .contenedor-card .card1 .texto1 .card-title, .seccion-index .contenedor-card-contacto .card1 .texto1 .card-title {
+        text-align: center;
+        padding: 10%; }
+      .seccion-index .contenedor-card .card1 .texto1 .boton, .seccion-index .contenedor-card-contacto .card1 .texto1 .boton {
         background-image: linear-gradient(180deg, #57E1FD 0%, #31B6D0 100%);
         padding: 10px 30px;
         border-radius: 5px;
         font-size: 1.3rem;
         text-decoration: none;
         color: #FFF;
+        padding: 10px;
+        height: 20px;
         font-family: 'Nunito Sans', sans-serif;
         opacity: 1;
         transition: opacity 300ms ease; }
-        .seccion-index .contenedor-card .card .boton:visited, .seccion-index .contenedor-card-contacto .card .boton:visited {
+        .seccion-index .contenedor-card .card1 .texto1 .boton:visited, .seccion-index .contenedor-card-contacto .card1 .texto1 .boton:visited {
           color: #FFF; }
-        .seccion-index .contenedor-card .card .boton:hover, .seccion-index .contenedor-card-contacto .card .boton:hover {
+        .seccion-index .contenedor-card .card1 .texto1 .boton:hover, .seccion-index .contenedor-card-contacto .card1 .texto1 .boton:hover {
           opacity: 0.8; }
-        .seccion-index .contenedor-card .card .boton:active, .seccion-index .contenedor-card-contacto .card .boton:active {
+        .seccion-index .contenedor-card .card1 .texto1 .boton:active, .seccion-index .contenedor-card-contacto .card1 .texto1 .boton:active {
           background-image: none;
           background-color: #57E1FD; }
         @media screen and (max-width: 768px) {
-          .seccion-index .contenedor-card .card .boton, .seccion-index .contenedor-card-contacto .card .boton {
+          .seccion-index .contenedor-card .card1 .texto1 .boton, .seccion-index .contenedor-card-contacto .card1 .texto1 .boton {
             font-size: 1rem; } }
+        @media screen and (max-width: 360px) {
+          .seccion-index .contenedor-card .card1 .texto1 .boton, .seccion-index .contenedor-card-contacto .card1 .texto1 .boton {
+            font-size: 0.7rem; } }
+    .seccion-index .contenedor-card .card2, .seccion-index .contenedor-card-contacto .card2 {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      background-color: #fefefe;
+      border: 1px solid #CCC;
+      border-radius: 20px;
+      gap: 30px;
+      padding: 10%;
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      width: 100vw;
+      height: 85vh;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 20%; }
+      .seccion-index .contenedor-card .card2 .card-title, .seccion-index .contenedor-card-contacto .card2 .card-title {
+        color: #6790D7;
+        font-size: 1.5rem; }
+      .seccion-index .contenedor-card .card2 .img2, .seccion-index .contenedor-card-contacto .card2 .img2 {
+        width: 100%; }
+        .seccion-index .contenedor-card .card2 .img2 img, .seccion-index .contenedor-card-contacto .card2 .img2 img {
+          max-width: 200px; }
+    .seccion-index .contenedor-card .texto2 .card-title, .seccion-index .contenedor-card-contacto .texto2 .card-title {
+      text-align: center;
+      padding: 15%; }
+    .seccion-index .contenedor-card .texto2 .boton, .seccion-index .contenedor-card-contacto .texto2 .boton {
+      background-image: linear-gradient(180deg, #57E1FD 0%, #31B6D0 100%);
+      padding: 10px 30px;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      text-decoration: none;
+      color: #FFF;
+      padding: 10px;
+      height: 20px;
+      font-family: 'Nunito Sans', sans-serif;
+      opacity: 1;
+      transition: opacity 300ms ease; }
+      .seccion-index .contenedor-card .texto2 .boton:visited, .seccion-index .contenedor-card-contacto .texto2 .boton:visited {
+        color: #FFF; }
+      .seccion-index .contenedor-card .texto2 .boton:hover, .seccion-index .contenedor-card-contacto .texto2 .boton:hover {
+        opacity: 0.8; }
+      .seccion-index .contenedor-card .texto2 .boton:active, .seccion-index .contenedor-card-contacto .texto2 .boton:active {
+        background-image: none;
+        background-color: #57E1FD; }
+      @media screen and (max-width: 768px) {
+        .seccion-index .contenedor-card .texto2 .boton, .seccion-index .contenedor-card-contacto .texto2 .boton {
+          font-size: 1rem; } }
+      @media screen and (max-width: 360px) {
+        .seccion-index .contenedor-card .texto2 .boton, .seccion-index .contenedor-card-contacto .texto2 .boton {
+          font-size: 0.7rem; } }
   .seccion-index .contenedor-card-contacto .card-contacto {
     border: 5px solid #6790D7;
     color: #315DA8;
     border-radius: 20px;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -272,7 +342,7 @@ a {
 
 .cualidades {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   justify-content: space-around;
   background-color: #ECECEC;
   height: 15%;
@@ -312,8 +382,7 @@ a {
     -moz-box-sizing: border-box;
     /* Firefox, other Gecko */
     box-sizing: border-box;
-    padding: 0 30px;
-    min-height: 500px;
+    padding: 10%;
     flex-direction: column; }
     .seccion-top-index .cont-text .titulo-top {
       font-size: 1.8rem;
@@ -325,35 +394,137 @@ a {
       align-items: center;
       width: 70%; }
   .seccion-index {
-    padding: 120px 30px 50px 30px; }
+    padding: 5%; }
     .seccion-index .seccion-titulo {
       font-size: 1.5rem; }
     .seccion-index .contenedor-card, .seccion-index .contenedor-card-contacto {
       border-radius: 10px;
       display: flex;
       flex-direction: column;
+      align-content: center;
+      justify-content: center;
       font-size: 0.8rem;
-      height: 100%;
-      gap: 20px; }
-      .seccion-index .contenedor-card .card, .seccion-index .contenedor-card-contacto .card {
+      width: 100%;
+      height: 50%;
+      gap: 10px;
+      padding: 10%; }
+      .seccion-index .contenedor-card .card1, .seccion-index .contenedor-card-contacto .card1 {
         height: auto;
-        max-width: 300px; }
-        .seccion-index .contenedor-card .card .card-title, .seccion-index .contenedor-card-contacto .card .card-title {
+        width: 90%;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        padding: 10%;
+        align-items: center;
+        justify-content: center;
+        align-content: center; }
+        .seccion-index .contenedor-card .card1 .texto1 .card-title, .seccion-index .contenedor-card-contacto .card1 .texto1 .card-title {
           font-size: 1rem;
-          text-align: center; }
-        .seccion-index .contenedor-card .card img, .seccion-index .contenedor-card-contacto .card img {
-          width: 100px; }
-    .seccion-index .contenedor-card-contacto .card-contacto {
-      max-width: 200px;
-      max-height: 200px;
-      padding: 10%;
-      border: 3px solid #6790D7; }
-      .seccion-index .contenedor-card-contacto .card-contacto .img {
-        height: 8vh; }
+          align-content: center;
+          padding: 10%; }
+        .seccion-index .contenedor-card .card1 .img1 img, .seccion-index .contenedor-card-contacto .card1 .img1 img {
+          height: 16vw;
+          padding: 10%;
+          justify-content: center; }
+      .seccion-index .contenedor-card .card2, .seccion-index .contenedor-card-contacto .card2 {
+        height: auto;
+        width: 90%;
+        gap: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+        padding: 10%;
+        justify-content: center; }
+        .seccion-index .contenedor-card .card2 .texto2 .card-title, .seccion-index .contenedor-card-contacto .card2 .texto2 .card-title {
+          font-size: 1rem;
+          text-align: center;
+          padding: 10%; }
+        .seccion-index .contenedor-card .card2 .img2 img, .seccion-index .contenedor-card-contacto .card2 .img2 img {
+          height: 16vw;
+          padding: 10%;
+          justify-content: center; }
+    .seccion-index .contenedor-card-contacto {
+      display: flex;
+      flex-direction: row;
+      gap: 15px; }
+      .seccion-index .contenedor-card-contacto .card-contacto {
+        width: 20%;
+        height: 15%;
+        padding: 10%;
+        border: 3px solid #6790D7;
+        display: flex;
+        flex-direction: column; }
+        .seccion-index .contenedor-card-contacto .card-contacto .img {
+          height: 6vw; }
   .cualidades .item img {
     max-height: 70px; }
   .cualidades .item p {
     font-size: 20px !important; } }
+
+@media screen and (max-width: 400px) {
+  .seccion-index {
+    padding: 5%; }
+    .seccion-index .seccion-titulo {
+      font-size: 1.5rem; }
+    .seccion-index .contenedor-card, .seccion-index .contenedor-card-contacto {
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      width: 100%;
+      height: 50%;
+      gap: 15px;
+      padding: 10%; }
+      .seccion-index .contenedor-card .card1, .seccion-index .contenedor-card-contacto .card1 {
+        height: auto;
+        width: 80%;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        padding: 10%;
+        align-items: center;
+        justify-content: center;
+        align-content: center; }
+        .seccion-index .contenedor-card .card1 .texto1 .card-title, .seccion-index .contenedor-card-contacto .card1 .texto1 .card-title {
+          font-size: 1rem;
+          align-content: center;
+          padding: 10%; }
+        .seccion-index .contenedor-card .card1 .img1 img, .seccion-index .contenedor-card-contacto .card1 .img1 img {
+          height: 16vw;
+          padding: 10%;
+          justify-content: center; }
+      .seccion-index .contenedor-card .card2, .seccion-index .contenedor-card-contacto .card2 {
+        height: auto;
+        width: 80%;
+        gap: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+        padding: 10%;
+        justify-content: center; }
+        .seccion-index .contenedor-card .card2 .texto2 .card-title, .seccion-index .contenedor-card-contacto .card2 .texto2 .card-title {
+          font-size: 1rem;
+          text-align: center;
+          padding: 10%; }
+        .seccion-index .contenedor-card .card2 .img2 img, .seccion-index .contenedor-card-contacto .card2 .img2 img {
+          height: 16vw;
+          padding: 10%;
+          justify-content: center; }
+    .seccion-index .contenedor-card-contacto {
+      display: flex;
+      flex-direction: row;
+      gap: 15px; }
+      .seccion-index .contenedor-card-contacto .card-contacto {
+        width: 20%;
+        height: 10%;
+        padding: 10%;
+        border: 3px solid #6790D7;
+        display: flex;
+        flex-direction: column; }
+        .seccion-index .contenedor-card-contacto .card-contacto .img {
+          height: 4vw; } }
 
 /* Top */
 /* Card */
@@ -364,7 +535,6 @@ a {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
-  min-height: 650px;
   width: 100%;
   padding: 0px 70px;
   margin-top: 120px;
@@ -373,18 +543,18 @@ a {
   padding: 0px 70px;
   gap: 50px; }
   .seccion-infoServ .infoServ {
-    flex-basis: 100%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     gap: 40px;
+    padding: 10%;
     justify-content: center;
     max-width: 600px; }
     .seccion-infoServ .infoServ .titulo-serv {
-      font-size: 32px;
+      font-size: 2rem;
       color: #2B65B0;
       font-family: 'Nunito Sans', sans-serif; }
     .seccion-infoServ .infoServ .text-serv {
-      font-size: 20px;
+      font-size: 1.2rem;
       color: #4C5671; }
     .seccion-infoServ .infoServ .boton-equipos {
       align-self: center;
@@ -394,6 +564,8 @@ a {
       font-size: 1.3rem;
       text-decoration: none;
       color: #FFF;
+      padding: 10px;
+      height: 20px;
       font-family: 'Nunito Sans', sans-serif;
       opacity: 1;
       transition: opacity 300ms ease; }
@@ -407,6 +579,9 @@ a {
       @media screen and (max-width: 768px) {
         .seccion-infoServ .infoServ .boton-equipos {
           font-size: 1rem; } }
+      @media screen and (max-width: 360px) {
+        .seccion-infoServ .infoServ .boton-equipos {
+          font-size: 0.7rem; } }
     .seccion-infoServ .infoServ .boton-housing {
       align-self: center;
       background-image: linear-gradient(180deg, #57E1FD 0%, #31B6D0 100%);
@@ -415,6 +590,8 @@ a {
       font-size: 1.3rem;
       text-decoration: none;
       color: #FFF;
+      padding: 10px;
+      height: 20px;
       font-family: 'Nunito Sans', sans-serif;
       opacity: 1;
       transition: opacity 300ms ease; }
@@ -428,14 +605,16 @@ a {
       @media screen and (max-width: 768px) {
         .seccion-infoServ .infoServ .boton-housing {
           font-size: 1rem; } }
+      @media screen and (max-width: 360px) {
+        .seccion-infoServ .infoServ .boton-housing {
+          font-size: 0.7rem; } }
   .seccion-infoServ .img-serv {
     flex-basis: 100%;
     align-self: center; }
     .seccion-infoServ .img-serv img {
       max-width: 100%;
       display: block;
-      margin: auto;
-      object-fit: cover; }
+      margin: auto; }
 
 .rigs {
   -webkit-box-sizing: border-box;
@@ -444,44 +623,50 @@ a {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   min-height: 700px;
-  padding: 0px 70px;
+  padding: 20%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px; }
+  gap: 40px;
+  width: 100%; }
   .rigs .titulo-rig {
-    font-size: 32px;
+    font-size: 2rem;
     color: #315DA8; }
   .rigs .contenedor-rig {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     align-items: center;
-    gap: 70px; }
+    gap: 40px; }
     .rigs .contenedor-rig .card {
       -webkit-box-sizing: border-box;
       /* Safari/Chrome, other WebKit */
       -moz-box-sizing: border-box;
       /* Firefox, other Gecko */
       box-sizing: border-box;
-      padding: 0px 50px;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      height: 500px;
+      height: auto;
       width: 100%;
       align-items: center;
       justify-content: center;
       background-color: #fefefe;
       border: 1px solid #CCC;
       border-radius: 20px;
-      gap: 30px; }
+      gap: 30px;
+      padding: 10%;
+      min-width: 40vw;
+      min-height: 30vh; }
       .rigs .contenedor-rig .card .card-title {
         color: #6790D7;
         font-size: 1.5rem; }
       .rigs .contenedor-rig .card .card-title {
-        font-family: "DM Sans", sans-serif; }
+        font-family: "DM Sans", sans-serif;
+        text-align: center;
+        font-size: calc(1.1em + 0.4vw); }
       .rigs .contenedor-rig .card .card-text {
-        font-size: 20px;
+        font-size: calc(0.8em + 0.4vw);
         color: #2f2f2f;
         text-align: center;
         font-family: 'Nunito Sans', sans-serif; }
@@ -492,6 +677,8 @@ a {
         font-size: 1.3rem;
         text-decoration: none;
         color: #FFF;
+        padding: 10px;
+        height: 20px;
         font-family: 'Nunito Sans', sans-serif;
         opacity: 1;
         transition: opacity 300ms ease; }
@@ -505,6 +692,9 @@ a {
         @media screen and (max-width: 768px) {
           .rigs .contenedor-rig .card .boton {
             font-size: 1rem; } }
+        @media screen and (max-width: 360px) {
+          .rigs .contenedor-rig .card .boton {
+            font-size: 0.7rem; } }
 
 @media screen and (max-width: 768px) {
   .seccion-infoServ {
@@ -515,14 +705,14 @@ a {
     .seccion-infoServ .infoServ {
       align-self: center; }
     .seccion-infoServ .titulo-serv {
-      font-size: 20px;
+      font-size: 1.2rem;
       color: #2B65B0;
       font-family: 'Nunito Sans', sans-serif; }
     .seccion-infoServ .text-serv {
-      font-size: 16px;
+      font-size: 1rem;
       color: #4C5671; }
   .rigs {
-    padding: 50px 30px;
+    padding: 15%;
     gap: 40px; }
     .rigs .titulo-rig {
       font-size: 1.5rem; }
@@ -530,12 +720,13 @@ a {
       gap: 40px;
       flex-direction: column; }
       .rigs .contenedor-rig .card {
-        max-width: 300px; }
+        max-width: 300px;
+        justify-content: center; }
       .rigs .contenedor-rig .card-title {
-        font-size: 16px;
+        font-size: 1rem;
         text-align: center; }
       .rigs .contenedor-rig .card-text {
-        font-size: 14px; } }
+        font-size: 0.9rem; } }
 
 .footer {
   width: 100%;

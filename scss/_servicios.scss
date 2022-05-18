@@ -19,7 +19,6 @@ $color-btn-texto: #FFF;
 .seccion-infoServ{
     @include border-box;
     font-family: 'DM Sans', sans-serif;
-    min-height: 650px;
     width: 100%;
     padding: 0px 70px;
     margin-top: 120px;
@@ -28,19 +27,20 @@ $color-btn-texto: #FFF;
     padding: 0px 70px;
     gap: 50px;
     .infoServ{
-        flex-basis: 100%;
+        
         display: flex;
-        flex-flow: column nowrap;
+        flex-direction: column;
         gap: 40px;
+        padding: 10%;
         justify-content: center;
         max-width: 600px;
         .titulo-serv{
-            font-size: 32px;
+            font-size: 2rem;
             color: $color-titulo;
             font-family: 'Nunito Sans', sans-serif;
         }
         .text-serv{
-            font-size: 20px;
+            font-size: 1.2rem;
             color: $color-texto-serv;
         }
         .boton-equipos{
@@ -60,7 +60,7 @@ $color-btn-texto: #FFF;
             max-width: 100%;
             display: block;
             margin: auto;
-            object-fit:cover;
+            
         }
     }
 }
@@ -68,33 +68,40 @@ $color-btn-texto: #FFF;
 .rigs{
     @include border-box;
     min-height: 700px;
-    padding: 0px 70px;
+    padding: 20%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 40px;
+    width: 100%;
     .titulo-rig{
-        font-size: 32px;
+        font-size: 2rem;
         color: #315DA8;
     }
     .contenedor-rig{
         display: flex;
-        flex-flow: row nowrap;
+        flex-direction: row;
         align-items: center;
-        gap: 70px;
+        gap: 40px;
         .card{
             @include border-box;
-            padding: 0px 50px;
+            width: 100%;
             @include card($card-bg, $card-border, $card-title);
+            min-width: 40vw;
+            min-height: 30vh;
             .card-title{
                 font-family: "DM Sans", sans-serif;
+                text-align: center;
+                font-size: calc(1.1em + 0.4vw);
             }
             .card-text{
-                font-size: 20px;
+                font-size: calc(0.8em + 0.4vw);
                 color: #2f2f2f;
                 text-align: center;
                 font-family: 'Nunito Sans', sans-serif;
+                
+                
             }
             .boton{
                 @include boton($color-btn-1, $color-btn-2, $color-btn-texto);
@@ -113,18 +120,18 @@ $color-btn-texto: #FFF;
             align-self: center;
         }
         .titulo-serv{
-            font-size: 20px;
+            font-size: 1.2rem;
             color: $color-titulo;
             font-family: 'Nunito Sans', sans-serif;
         }
         .text-serv{
-            font-size: 16px;
+            font-size: 1rem;
             color: $color-texto-serv;
         }
     }
 
     .rigs{
-        padding: 50px 30px;
+        padding: 15%;
         gap: 40px;
         .titulo-rig{
             font-size: 1.5rem;
@@ -132,15 +139,18 @@ $color-btn-texto: #FFF;
         .contenedor-rig{
             gap: 40px;
             flex-direction: column;
+            
             .card{
                 max-width: 300px;
+                justify-content: center;
             }
             .card-title{
-                font-size: 16px;
+                font-size: 1rem;
                 text-align: center;    
             }
             .card-text{
-                font-size: 14px;
+                font-size: 0.9rem;
+                
             }
         }
         
