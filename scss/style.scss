@@ -47,7 +47,7 @@ a{
     }
     
     .contenedor{
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
         @include border-box;
     }    

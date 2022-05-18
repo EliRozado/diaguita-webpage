@@ -60,7 +60,7 @@ $contacto-texto: #315DA8;
 .seccion-index{
     width: 100%;
     @include border-box;
-    min-height: 400px;
+    
     padding: 20%;
     display: flex;
     flex-direction: column;
@@ -79,17 +79,17 @@ $contacto-texto: #315DA8;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 30px;
         position: relative;
         .card1{
             @include card($card-bg, $card-border, $card-title);
             @include border-box;
-            width: 85vw;
-            height: 85vh;
+            width: 80vw;
+            height: 80vh;
             gap: 50px;
             align-items: center;
             justify-content: center;
-            padding: 18%;
+            padding: 20%;
             
 
             
@@ -123,12 +123,13 @@ $contacto-texto: #315DA8;
         .card2{
             @include card($card-bg, $card-border, $card-title);
             @include border-box;
-            width: 85vw;
-            height: 85vh;
+            width: 80vw;
+            height: 80vh;
             gap: 50px;
             align-items: center;
             justify-content: center;
-            padding: 18%;
+            padding: 20%;
+            
 
             .img2{
                 width: 100%;
@@ -165,7 +166,7 @@ $contacto-texto: #315DA8;
             justify-content: center;
             align-items: center;
             gap: 30px;
-            width: 350px;
+            width: 100%;
             height: 350px;
             font-size: 1.3em;
             .img{
@@ -223,10 +224,12 @@ $contacto-texto: #315DA8;
 }
 
 @media screen and (max-width:768px){
+    
     .seccion-top-index{
         @include border-box;
         padding: 10%;
         flex-direction: column;
+        
         .cont-text{
             .titulo-top{
                 font-size: 1.8rem;
@@ -244,7 +247,8 @@ $contacto-texto: #315DA8;
     }
 
     .seccion-index{
-        padding: 5%;
+        padding: 6%;
+        
         .seccion-titulo{
             font-size: 1.3rem;
         }
@@ -255,10 +259,10 @@ $contacto-texto: #315DA8;
             align-content: center;
             justify-content: center;
             font-size: 0.8rem;
-            width: 100%;
+            width: 95%;
             height: 50%;
             gap: 10px; 
-            padding: 10%;
+            padding: 20%;
             .card1{
                 height: auto;
                 width: 90%;
@@ -337,6 +341,7 @@ $contacto-texto: #315DA8;
     }
 
     .cualidades{
+        max-width: 100%;
         .item{
             img{
                 max-height: 70px;
@@ -350,7 +355,8 @@ $contacto-texto: #315DA8;
 @media screen and (max-width:400px){
     
     .seccion-index{
-        padding: 5%;
+        max-width: 100%;
+        padding: 10%;
         .seccion-titulo{
             font-size: 1.1rem;
         }
@@ -361,7 +367,7 @@ $contacto-texto: #315DA8;
             align-content: center;
             justify-content: center;
             font-size: 0.7rem;
-            width: 100%;
+            width: 95%;
             height: 50%;
             gap: 10px; 
             padding: 10%;
@@ -371,7 +377,7 @@ $contacto-texto: #315DA8;
                 gap: 10px;
                 display: flex;
                 flex-direction: row;
-                padding: 8%;
+                padding: 8.5%;
                 align-items: center;
                 justify-content: center;
                 align-content: center;
